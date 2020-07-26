@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang='ja'>
+
+<head>
+	<meta charset='utf-8'>
+	<title>リストタグ</title>
+	<script type='text/javascript' src='../js/jquery-3.1.1.min.js'></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			list-style: none;
+		}
+
+		body {
+			padding: 40px;
+		}
+
+		main {
+			max-width: 1000px;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			padding: 2px;
+		}
+
+		.input,
+		.output {
+			flex: auto;
+		}
+
+		textarea {
+			width: 100%;
+			height: 200px;
+			display: block;
+			outline: none;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		ul {
+			width: 150px;
+			padding: 10px;
+		}
+
+		li {
+			text-align: center;
+			border: solid 1px #333;
+			margin-bottom: 10px;
+			padding: .2em .2em .1em;
+			border-radius: 5px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+
+
+
+		li:nth-child(1) {
+			background: #333;
+			color: #fafafa;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<ul>
+			<li><a href="#">トップページ</a></li>
+			<li><a href="#">会社概要</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+
+		<div class="input"><textarea placeholder="リストにしたいテキストを入れてください。"></textarea></div>
+		<ul>
+			<li class="change">作成</li>
+			<li class="reset">リセット</li>
+		</ul>
+		<div class="output"><textarea></textarea></div>
+	</main>
+
+	<script>
+		$('.output textarea').on('focus', function () {
+			$(this).select();
+		});
+		$('.reset').on('click', function () {
+			$('.input textarea').val('');
+			$('.output textarea').val('');
+		});
+
+		$('.change').on('click', function () {
+			const array = $('.input textarea').val().split('\n');
+			let txt = '';
+			for (i = 0; i < array.length; i++) {
+				txt = txt + ' <li><a href="#">' + array[i] + '</a></li>\n';
+			}
+			$('.output textarea').val('<ul>\n' + txt + '</ul>\n');
+		});
+	</script>
+</body>
+
+</html>
