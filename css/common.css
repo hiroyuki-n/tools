@@ -18,6 +18,31 @@ h6 {
 p {
   margin-bottom: 1em; }
 
+button {
+  min-width: 120px;
+  min-height: 35px;
+  font-size: 14px;
+  line-height: 1;
+  border: solid 1px #333;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; }
+  button.btn_b {
+    color: #fafafa;
+    background: #333; }
+  button.btn_w {
+    color: #333;
+    background: #fafafa; }
+
+textarea {
+  color: #333;
+  background: #fafafa;
+  border: solid 1px #333;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 0.5em;
+  outline: none; }
+
 body {
   color: #333;
   background: #fafafa;
@@ -114,5 +139,11 @@ body {
   .main_nav .drawer_nav {
     pointer-events: none;
     opacity: 0; }
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 120px 0 20px; }
 
 /*# sourceMappingURL=common.css.map */

@@ -21,6 +21,33 @@ h6 {
 p {
     margin-bottom: 1em;
 }
+button {
+    min-width: 120px;
+    min-height: 35px;
+    font-size: 14px;
+    line-height: 1;
+    border: solid 1px $color_black;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    &.btn_b {
+        color: $color_white;
+        background: $color_black;
+    }
+    &.btn_w {
+        color: $color_black;
+        background: $color_white;
+    }
+}
+textarea {
+    color: $color_black;
+    background: $color_white;
+    border: solid 1px $color_black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 0.5em;
+    outline: none;
+}
 // ================================
 // ベース
 // ================================
@@ -157,4 +184,11 @@ body {
         pointer-events: none;
         opacity: 0;
     }
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 120px 0 20px;
 }
