@@ -34,50 +34,52 @@ body {
     body a:hover {
       opacity: 0.6; }
 
-.sp_header {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background: #aaa;
+.main_nav {
+  width: 50px;
+  height: 50px;
+  background: #fafafa;
   position: fixed;
   top: 8px;
   right: 8px;
   border-radius: 30px;
-  border: solid 3px #333;
+  border: solid 2px #333;
   transition: 0.3s;
-  cursor: pointer;
   /*=====================　ハンバーガー　=====================*/
   /*=====================　ナビの中身　=====================*/ }
-  .sp_header.active {
+  .main_nav.active {
     width: calc(100vw - 16px);
     height: calc(100vh - 16px);
     border-radius: 10px;
     top: 8px;
     right: 8px; }
-    .sp_header.active .drawer_button .inner {
+    .main_nav.active .drawer_button .inner {
       background: rgba(51, 51, 51, 0); }
-      .sp_header.active .drawer_button .inner:after {
+      .main_nav.active .drawer_button .inner:after {
         top: 0;
         transform: rotate(45deg);
         transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-      .sp_header.active .drawer_button .inner:before {
+      .main_nav.active .drawer_button .inner:before {
         bottom: 0;
         transform: rotate(-45deg);
         transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-  .sp_header .drawer_button {
-    width: 45px;
-    height: 45px;
+    .main_nav.active .drawer_nav {
+      opacity: 1;
+      pointer-events: auto; }
+  .main_nav .drawer_button {
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    position: fixed;
-    top: 8px;
-    right: 8px; }
-    .sp_header .drawer_button .inner,
-    .sp_header .drawer_button .inner:after,
-    .sp_header .drawer_button .inner:before {
-      width: 22px;
-      height: 3px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer; }
+    .main_nav .drawer_button .inner,
+    .main_nav .drawer_button .inner:after,
+    .main_nav .drawer_button .inner:before {
+      width: 20px;
+      height: 2px;
       border-radius: 10em; }
-    .sp_header .drawer_button .inner {
+    .main_nav .drawer_button .inner {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -87,33 +89,30 @@ body {
       background: #333;
       transition: all 0ms 300ms;
       z-index: 999; }
-      .sp_header .drawer_button .inner:before {
+      .main_nav .drawer_button .inner:before {
         content: "";
         position: absolute;
         bottom: 7px;
         background: #333;
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-      .sp_header .drawer_button .inner:after {
+      .main_nav .drawer_button .inner:after {
         content: "";
         position: absolute;
         top: 7px;
         background: #333;
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-      .sp_header .drawer_button .inner.active {
+      .main_nav .drawer_button .inner.active {
         background: rgba(51, 51, 51, 0); }
-      .sp_header .drawer_button .inner.active:after {
+      .main_nav .drawer_button .inner.active:after {
         top: 0;
         transform: rotate(45deg);
         transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-      .sp_header .drawer_button .inner.active:before {
+      .main_nav .drawer_button .inner.active:before {
         bottom: 0;
         transform: rotate(-45deg);
         transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-  .sp_header .drawer_nav {
+  .main_nav .drawer_nav {
     pointer-events: none;
-    z-index: 9;
     opacity: 0; }
-    .sp_header .drawer_nav.active {
-      opacity: 1; }
 
 /*# sourceMappingURL=common.css.map */

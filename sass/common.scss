@@ -51,18 +51,16 @@ body {
 // ヘッダー
 // ================================
 
-.sp_header {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: #aaa;
+.main_nav {
+    width: 50px;
+    height: 50px;
+    background: $color_white;
     position: fixed;
     top: 8px;
     right: 8px;
     border-radius: 30px;
-    border: solid 3px $color_black;
+    border: solid 2px $color_black;
     transition: 0.3s;
-    cursor: pointer;
     &.active {
         width: calc(100vw - 16px);
         height: calc(100vh - 16px);
@@ -86,22 +84,27 @@ body {
                 }
             }
         }
+        .drawer_nav {
+            opacity: 1;
+            pointer-events: auto;
+        }
     }
 
     /*=====================　ハンバーガー　=====================*/
     .drawer_button {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         border-radius: 100%;
-        position: fixed;
-        top: 8px;
-        right: 8px;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        cursor: pointer;
 
         .inner,
         .inner:after,
         .inner:before {
-            width: 22px;
-            height: 3px;
+            width: 20px;
+            height: 2px;
             border-radius: 10em;
         }
         .inner {
@@ -152,10 +155,6 @@ body {
 
     .drawer_nav {
         pointer-events: none;
-        z-index: 9;
         opacity: 0;
-        &.active {
-            opacity: 1;
-        }
     }
 }

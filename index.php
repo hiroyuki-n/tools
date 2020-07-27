@@ -10,25 +10,14 @@
 </head>
 
 <body>
-
-	<header class="sp_header">
+	<nav class="main_nav">
 		<div class="drawer_button">
 			<div class="inner"></div>
 		</div>
 		<div class="drawer_nav">
-			<div class="inner">
-				<div class="logo"><a href="/">LOGO</a></div>
-				<div class="content_nav_sp">
-					<ul>
-						<li><a href="/">トップページ</a></li>
-						<li><a href="/tools/list/index.html">リスト</a></li>
-					</ul>
-				</div>
-			</div>
+			なび
 		</div>
-	</header>
-
-
+	</nav>
 	トップページ
 </body>
 
