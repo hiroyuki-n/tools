@@ -13,9 +13,9 @@
 
 	<header class="sp_header">
 		<div class="drawer_button">
-			<div class="inner type1"></div>
+			<div class="inner"></div>
 		</div>
-		<div class="drawer_nav type1">
+		<div class="drawer_nav">
 			<div class="inner">
 				<div class="logo"><a href="/">LOGO</a></div>
 				<div class="content_nav_sp">

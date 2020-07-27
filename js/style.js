@@ -2,9 +2,8 @@
 //=====　スマホハンバーガーメニュー　==============
 //============================================
 $(function () {
-    $(`.drawer_button`).click(function () {
-        $('.drawer_button .inner').toggleClass('active');
-        $('.drawer_nav').toggleClass('active');
+    $(`.sp_header`).click(function () {
+        $('.sp_header').toggleClass('active');
     });
 });
 $(function () {
